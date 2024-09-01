@@ -21,7 +21,8 @@ const cardData = [
 
 export default function HomeSectionCards() {
   return (
-    <div className="container mt-8 ml-12 grid grid-cols-12 gap-6">
+    <div className="flex mt-10 ml-20 mr-20 justify-center">
+    <div className="container  grid grid-cols-12 gap-4">
       {/* Left Column Cards */}
       <div className="col-span-12 md:col-span-3 flex justify-center">
         <div className="space-y-0 items-center">
@@ -41,7 +42,7 @@ export default function HomeSectionCards() {
         </div>
       </div>
       {/* Center Image */}
-      <div className="col-span-12 md:col-span-4 hidden lg:block">
+      <div className="col-span-12 md:col-span-6 hidden lg:block">
         <img
           className="w-full h-100"
           src="https://www.medialogic.com/wp-content/uploads/2018/06/FS_american-express_dont-live-without-it-2.jpg"
@@ -50,12 +51,12 @@ export default function HomeSectionCards() {
       </div>
 
       {/* Right Column Cards */}
-      <div className="col-span-12 md:col-span-4 space-y-6">
+      <div className="col-span-12 md:col-span-3 space-y-4">
         <div className="max-w-full bg-[#E6E6E6]">
           <a href="#">
             <img
               className="rounded-t-lg w-full"
-              src="https://www.creativebrief.com/application/files/cache/402e601355b6d250637191c8dd471994.jpg"
+              src="https://www.americanexpress.com/content/dam/amex/en-in/homepage/promo/Eligibility-Checker_Promo-Placement_400x130.jpg"
               alt=""
             />
           </a>
@@ -73,7 +74,7 @@ export default function HomeSectionCards() {
           <a href="#">
             <img
               className="rounded-t-lg w-full"
-              src="https://www.creativebrief.com/application/files/cache/402e601355b6d250637191c8dd471994.jpg"
+              src="https://www.americanexpress.com/content/dam/amex/en-in/homepage/promo/Membership-Rewards_Promo-Placement_400x130.jpg"
               alt=""
             />
           </a>
@@ -87,6 +88,7 @@ export default function HomeSectionCards() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
