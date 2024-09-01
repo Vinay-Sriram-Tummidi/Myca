@@ -21,20 +21,20 @@ const cardData = [
 
 export default function HomeSectionCards() {
   return (
-    <div className="flex mt-10 ml-20 mr-20 justify-center">
-    <div className="container  grid grid-cols-12 gap-4">
+    <div className="flex mt-10 ml-20 mr-20 justify-center absolute z-10">
+    <div className="container grid grid-cols-12 gap-4">
       {/* Left Column Cards */}
       <div className="col-span-12 md:col-span-3 flex justify-center">
         <div className="space-y-0 items-center">
           {cardData.map(({ title, imageUrl }) => (
-            <div key={title} className="max-w-full ml-10 card w-80 p-4">
+            <div key={title} className="max-w-full ml-10 card w-80 p-4 relative z-10">
               <img
                 className="object-contain"
                 style={{ height: '3.9rem', width: '3.9rem' }}
                 src={imageUrl}
                 alt={title}
               />
-              <span className="ml-1 mt-1 font-semibold">
+              <span className="ml-1 mt-1 font-sans font-semibold">
                 <h3>{title}</h3>
               </span>
             </div>

@@ -1,12 +1,18 @@
 import './App.css';
-import Navigation from './Components/Header/Navigation'
+import Login from './Components/Forms/Login';
+import Navigation from './Components/Header/Navigation';
 import HomeSectionCards from './Components/Home/HomeSectionCards';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Correct imports
+
 function App() {
   return (
-    <div>
-<Navigation/>
-<HomeSectionCards/>
-    </div>
+    <Router>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<HomeSectionCards />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
   );
 }
 

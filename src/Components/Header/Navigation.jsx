@@ -14,6 +14,7 @@ import {
   TabPanels,
 } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link } from 'react-router-dom';
 
 const navigation = {
   categories: [
@@ -146,7 +147,7 @@ export default function Navigation() {
   return (
     <div className="bg-gray">
       {/* Mobile menu */}
-      <Dialog open={open} onClose={setOpen} className="relative z-40 lg:hidden">
+      <Dialog open={open} onClose={setOpen} className="relative z-50 lg:hidden">
         <DialogBackdrop
           transition
           className="fixed inset-0 bg-black bg-opacity-25 transition-opacity duration-300 ease-linear data-[closed]:opacity-0"
@@ -254,7 +255,7 @@ export default function Navigation() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
+                <a href="/">
                   <span className="sr-only">Amex</span>
                   <img
                     alt=""
@@ -274,10 +275,10 @@ export default function Navigation() {
                           {category.name}
                         </PopoverButton>
                       </div>
-
+                    {/* /*Z-index lies here*/}
                       <PopoverPanel
                         transition
-                        className="absolute inset-x-0 bg-red-100 hover:bg-gray-100 top-full text-base text-[#016FD0] transition data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                        className="absolute inset-x-0 bg-red-100 z-50 hover:bg-gray-100 top-full text-base text-[#016FD0] transition data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
                       >
                         {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                         <div aria-hidden="true" className="absolute inset-0 top-1/2 bg-white shadow" />
@@ -355,9 +356,12 @@ export default function Navigation() {
                   Help
                   </a>
                   <span aria-hidden="true" className="h-6 w-px bg-gray-200" />
+                  <Link to="/Login">
                   <button className="bg-[#016FD0] text-white font-sans py-2 px-3 rounded ">
                     Log In
                   </button>
+                  </Link>
+             
                 </div>
               </div>
             </div>
